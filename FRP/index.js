@@ -35,7 +35,7 @@ function drawPattern(world, patternName, originX, originY) {
     return newWorld;
 }
 
-/* add a beacon at (20,20) */
+/* add an initial pattern */
 initialWorld = drawPattern(initialWorld, 'SPARKY', 5, 5);
 
 /* wrap update functions to include HEIGHT and WIDTH as defined here */
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     eventStream
         .scan(initialWorld, (oldWorld, updateWorldFunc) => updateWorldFunc(oldWorld))
         /* update the display grid each time a new world is produced */
-        .onValue(world => {
-            ReactDOM.render(<Grid world={world} height={HEIGHT} width={WIDTH} />, root);
-        });
+        .onValue(world =>
+            ReactDOM.render(<Grid world={world} height={HEIGHT} width={WIDTH} />, root)
+        );
 });

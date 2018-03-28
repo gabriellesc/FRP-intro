@@ -7,20 +7,17 @@
 
 ## Demos
 - [FRP-GOL-init](FRP-GOL-init)
-  - A very simple FRP JS implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life).
+  - A very simple interactive FRP JS implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life).
   - Uses [Bacon.js](https://github.com/baconjs/bacon.js) and React.js.
   - Modeled directly on the Haskell FRP Game of Life from Tikhon Jelvis' talk, [A Sensible Intro to FRP](https://begriffs.com/posts/2016-07-27-tikhon-on-frp.html).
-  - Responds to regular ticks, cell clicks, and pausing/unpausing.
-
+  
 - [FRP-GOL-testable](FRP-GOL-testable)
-  - A slightly more complex FRP JS implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life), which is structured for improved testability over [FRP-GOL-init](FRP-GOL-init).
+  - A slightly more complex interactive FRP JS implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) (structured for improved testability over [FRP-GOL-init](FRP-GOL-init)).
   - Uses [Bacon.js](https://github.com/baconjs/bacon.js) and React.js.
-  - Responds to regular ticks, cell clicks, and pausing/unpausing.
 
 - [non-FRP-GOL](non-FRP-GOL)
-  - A JS implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life), which does *not* use FRP principles.
+  - An interactive JS implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) (does *not* use FRP principles).
   - Uses React.js.
-  - Responds to regular ticks, cell clicks, and pausing/unpausing.
 
 ## Demo Contents
 - [FRP-GOL-init](FRP-GOL-init) / [FRP-GOL-testable](FRP-GOL-testable) / [non-FRP-GOL](non-FRP-GOL)

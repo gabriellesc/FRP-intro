@@ -24,12 +24,18 @@
 
 ## Demo Contents
 - [FRP-GOL-init](FRP-GOL-init) / [FRP-GOL-testable](FRP-GOL-testable) / [non-FRP-GOL](non-FRP-GOL)
-  - app.js: Game of Life logic (world update functions, etc.)
-  - bundle.js: bundled code produced by the compiler
-  - grid.js: React grid component
-  - index.html: main HTML page
-  - index.js: main app logic, combining the Game of Life logic, React grid component, and app interaction implementation
-  - patternsDict.js: dictionary of Game of Life patterns
+  - **app.js**  
+  Game of Life logic (world update functions, etc.)
+  - **bundle.js**  
+  bundled code produced by the compiler
+  - **grid.js**  
+  React grid component
+  - **index.html**  
+  main HTML page
+  - **index.js**  
+  main app logic, combining the Game of Life logic, React grid component, and app interaction implementation
+  - **patternsDict.js**  
+  dictionary of Game of Life patterns
 
 ## How to use it
 To run any of the demos, simply download its main directory and open index.html.

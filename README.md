@@ -1,5 +1,9 @@
-## An Introduction to Functional Reactive Programming (FRP)
-#### CSC302H1 (Winter 2018), University of Toronto
+# An Introduction to Functional Reactive Programming
+### CSC302H1 (Winter 2018), University of Toronto
+
+| Slides available [here](https://docs.google.com/presentation/d/e/2PACX-1vQ06TaoEe3o9Xu7FluNigjqaKwXreoPj4xYgZ-ZCAw4cXlMSPpEqAH0re11eP2_uzw7N_hpEZ33gWsG/pub?start=false&loop=false&delayms=3000). |
+| ------------- |
+
 
 ## Demos
 - [FRP-GOL-init](FRP-GOL-init)
@@ -18,7 +22,7 @@
   - Uses React.js.
   - Responds to regular ticks, cell clicks, and pausing/unpausing.
 
-## Contents
+## Demo Contents
 - [FRP-GOL-init](FRP-GOL-init) / [FRP-GOL-testable](FRP-GOL-testable) / [non-FRP-GOL](non-FRP-GOL)
   - app.js: Game of Life logic (world update functions, etc.)
   - bundle.js: bundled code produced by the compiler

@@ -1,0 +1,29 @@
+{
+  "name": "FRP-GOL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babelify": "^7.3.0",
+    "baconjs": "^2.0.5",
+    "browserify": "^14.4.0",
+    "lodash": "^4.17.5",
+    "npm": "^5.8.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "watchify": "^3.9.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js -o ./bundle.js -t babelify",
+    "watch": "watchify index.js -o ./bundle.js -t babelify -v"
+  },
+  "keywords": [],
+  "author": "gabriellesc <gabriellesinghcadieux@gmail.com>",
+  "license": "MIT"
+}

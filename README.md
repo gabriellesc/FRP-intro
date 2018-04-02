@@ -13,27 +13,27 @@ The [content below](#getting-started-with-functional-reactive-programming) is in
 
 <table>
   <tbody>
-    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a></td></tr>
-    <tr><td>
-      A very simple interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>.<br />
+    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a></td>
+    <td>
+      <p>A very simple interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>.</p>
       Uses <a href="https://github.com/baconjs/bacon.js">Bacon.js</a> and React.js.<br />
       Modeled directly on the Haskell FRP Game of Life from Tikhon Jelvis' talk, <a href="https://begriffs.com/posts/2016-07-27-tikhon-on-frp.html">A Sensible Intro to FRP</a>.
     </td></tr>
-    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-testable">FRP-GOL-testable</a></td></tr>
-    <tr><td>
-      A slightly more complex interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> (structured for improved testability over <a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a>).<br />
-      Uses <a href="https://github.com/baconjs/bacon.js">Bacon.js</a> and React.js.<br />
+    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-testable">FRP-GOL-testable</a></td>
+    <td>
+      <p>A slightly more complex interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> <b>(structured for improved testability over <a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a>)</b>.</p>
+      Uses <a href="https://github.com/baconjs/bacon.js">Bacon.js</a> and React.js.
     </td></tr>            
-    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/non-FRP-GOL">non-FRP-GOL</a></td></tr>
-    <tr><td>
-      An interactive JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> (does <i>not</i> use FRP principles).<br />
+    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/non-FRP-GOL">non-FRP-GOL</a></td>
+    <td>
+      <p>An interactive JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> <b>(without using FRP principles)</b>.</p>
       Uses React.js.   
     </td></tr>   
     <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-twitter">FRP-twitter</a></td></tr>
   </tbody>
 </table>
 
-## Demo contents
+### Demo contents
 - [FRP-GOL-init](FRP-GOL-init) / [FRP-GOL-testable](FRP-GOL-testable) / [non-FRP-GOL](non-FRP-GOL)
   - **app.js**  
   Game of Life logic (world update functions, etc.)

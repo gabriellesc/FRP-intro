@@ -5,7 +5,7 @@
 The lecture slides are available [here](https://docs.google.com/presentation/d/e/2PACX-1vQ06TaoEe3o9Xu7FluNigjqaKwXreoPj4xYgZ-ZCAw4cXlMSPpEqAH0re11eP2_uzw7N_hpEZ33gWsG/pub?start=false&loop=false&delayms=3000). 
 This repo contains the complete code for the demos discussed in the slides.
 
-The [content below](#Getting-Started-With-Functional-Reactive-Programming) is intended to be a tutorial version of the lectures.
+The [content below](#getting-started-with-functional-reactive-programming) is intended to be a tutorial version of the lectures.
 
 ---
 

@@ -29,27 +29,35 @@ The [content below](#getting-started-with-functional-reactive-programming) is in
       <p>An interactive JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> <b>(without using FRP principles)</b>.</p>
       Uses React.js.   
     </td></tr>   
-    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-twitter">FRP-twitter</a></td></tr>
+    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-twitter">FRP-twitter</a></td>
+      <td /></tr>
   </tbody>
 </table>
 
 ### Contents
-- [FRP-GOL-init](FRP-GOL-init) / [FRP-GOL-testable](FRP-GOL-testable) / [non-FRP-GOL](non-FRP-GOL)
-  - **app.js**  
-  Game of Life logic (world update functions, etc.)
-  - **bundle.js**  
-  bundled code produced by the compiler
-  - **grid.js**  
-  React grid component
-  - **index.html**  
-  main HTML page
-  - **index.js**  
-  main app logic, combining the Game of Life logic, React grid component, and app interaction implementation
-  - **patternsDict.js**  
-  dictionary of Game of Life patterns
-
-- [FRP-twitter](FRP-twitter)
-  - 
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <p><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a></p>
+        <p><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-testable">FRP-GOL-testable</a></p>
+        <p><a href="https://github.com/gabriellesc/FRP-intro/tree/master/non-FRP-GOL">non-FRP-GOL</a></p>
+      </td>
+      <td>
+        <dl>
+          <dt>app.js</dt><dd>Game of Life logic (world update functions, etc.)</dd>  
+          <dt>bundle.js</dt><dd>bundled code produced by the compiler</dd>  
+          <dt>grid.js</dt><dd>React grid component</dd>  
+          <dt>index.html</dt><dd>main HTML page</dd>  
+          <dt>index.js</dt><dd>main app logic, combining the Game of Life logic, React grid component, and app interaction implementation</dd>  
+          <dt>patternsDict.js</dt><dd>dictionary of Game of Life patterns</dd>  
+        </dl>
+      </td>
+    </tr> 
+    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-twitter">FRP-twitter</a></td>
+    <td /></tr>
+  </tbody>
+</table>
 
 ## How to use this code
 **Each demo is live:**

@@ -10,54 +10,41 @@ The [content below](#getting-started-with-functional-reactive-programming) is in
 ---
 
 ## Demos
+All demos use React.js, and all FRP demos use <a href="https://github.com/baconjs/bacon.js">Bacon.js</a>.
+
 
 <table>
   <tbody>
     <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a></td>
     <td>
-      <p>A very simple interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>.</p>
-      Uses <a href="https://github.com/baconjs/bacon.js">Bacon.js</a> and React.js.<br />
+      A very simple interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>.<br />
       Modeled directly on the Haskell FRP Game of Life from Tikhon Jelvis' talk, <a href="https://begriffs.com/posts/2016-07-27-tikhon-on-frp.html">A Sensible Intro to FRP</a>.
     </td></tr>
     <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-testable">FRP-GOL-testable</a></td>
     <td>
-      <p>A slightly more complex interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> <b>(structured for improved testability over <a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a>)</b>.</p>
-      Uses <a href="https://github.com/baconjs/bacon.js">Bacon.js</a> and React.js.
+      A slightly more complex interactive FRP JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> <b>(structured for improved testability over <a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a>)</b>.
     </td></tr>            
     <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/non-FRP-GOL">non-FRP-GOL</a></td>
     <td>
-      <p>An interactive JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> <b>(without using FRP principles)</b>.</p>
-      Uses React.js.   
+      An interactive JS implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a> <b>(without using FRP principles)</b>.
     </td></tr>   
     <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-twitter">FRP-twitter</a></td>
       <td /></tr>
   </tbody>
 </table>
 
-### Contents
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <p><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-init">FRP-GOL-init</a></p>
-        <p><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-GOL-testable">FRP-GOL-testable</a></p>
-        <p><a href="https://github.com/gabriellesc/FRP-intro/tree/master/non-FRP-GOL">non-FRP-GOL</a></p>
-      </td>
-      <td>
-        <dl>
-          <dt>app.js</dt><dd>Game of Life logic (world update functions, etc.)</dd>  
-          <dt>bundle.js</dt><dd>bundled code produced by the compiler</dd>  
-          <dt>grid.js</dt><dd>React grid component</dd>  
-          <dt>index.html</dt><dd>main HTML page</dd>  
-          <dt>index.js</dt><dd>main app logic, combining the Game of Life logic, React grid component, and app interaction implementation</dd>  
-          <dt>patternsDict.js</dt><dd>dictionary of Game of Life patterns</dd>  
-        </dl>
-      </td>
-    </tr> 
-    <tr><td><a href="https://github.com/gabriellesc/FRP-intro/tree/master/FRP-twitter">FRP-twitter</a></td>
-    <td /></tr>
-  </tbody>
-</table>
+### [FRP-GOL-init](FRP-GOL-init) / [FRP-GOL-testable](FRP-GOL-testable) / [non-FRP-GOL](non-FRP-GOL) contents
+<dl>
+  <dt>app.js</dt><dd>Game of Life logic (world update functions, etc.)</dd>  
+  <dt>bundle.js</dt><dd>bundled code produced by the compiler</dd>  
+  <dt>grid.js</dt><dd>React grid component</dd>  
+  <dt>index.html</dt><dd>main HTML page</dd>  
+  <dt>index.js</dt><dd>main app logic, combining the Game of Life logic, React grid component, and app interaction implementation</dd>  
+  <dt>patternsDict.js</dt><dd>dictionary of Game of Life patterns</dd>  
+</dl>
+        
+### [FRP-twitter](FRP-twitter) contents
+
 
 ## How to use this code
 **Each demo is live:**

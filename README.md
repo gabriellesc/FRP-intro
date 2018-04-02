@@ -33,7 +33,7 @@ The [content below](#getting-started-with-functional-reactive-programming) is in
   </tbody>
 </table>
 
-### Demo contents
+### Contents
 - [FRP-GOL-init](FRP-GOL-init) / [FRP-GOL-testable](FRP-GOL-testable) / [non-FRP-GOL](non-FRP-GOL)
   - **app.js**  
   Game of Life logic (world update functions, etc.)
@@ -52,13 +52,12 @@ The [content below](#getting-started-with-functional-reactive-programming) is in
   - 
 
 ## How to use this code
-**Each demo is currently live:**
+**Each demo is live:**
 
 | Demo                                 | Running at |
 | :----------------------------------: | ---------- |
 | [FRP-GOL-init](FRP-GOL-init)         | [gabriellesc.github.io/FRP-intro/FRP-GOL-init/](https://gabriellesc.github.io/FRP-intro/FRP-GOL-init) |
 | [FRP-GOL-testable](FRP-GOL-testable) | [gabriellesc.github.io/FRP-intro/FRP-GOL-testable/](https://gabriellesc.github.io/FRP-intro/FRP-GOL-testable) |
-| [non-FRP-GOL](non-FRP-GOL)           | [gabriellesc.github.io/FRP-intro/non-FRP-GOL/](https://gabriellesc.github.io/FRP-intro/non-FRP-GOL) |
 | [non-FRP-GOL](non-FRP-GOL)           | [gabriellesc.github.io/FRP-intro/non-FRP-GOL/](https://gabriellesc.github.io/FRP-intro/non-FRP-GOL) |
 | [FRP-twitter](FRP-twitter)           | [gabriellesc.github.io/FRP-intro/FRP-twitter/](https://gabriellesc.github.io/FRP-intro/FRP-twitter) |
 

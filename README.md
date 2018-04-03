@@ -118,18 +118,19 @@ What is the advantage of having a functional model?
 --> **Testability**
 
 What's the problem with this code?
-```
+```javascript
 function crazyDouble(x) {
-	if (new Date.getDay() == 4)    // if today is Wednesday
-		return x*3;
-	else
-		return x*2;
+    if (new Date.getDay() == 4)    // if today is Wednesday
+	    return x*3;
+    else
+        return x*2;
 }
 
 // We'd like to apply crazyDouble to all the elements of a list...
+
 var doubled = []
 for (var elem of [1, 2, 3])
-	doubled.append(crazyDouble(elem))
+    doubled.append(crazyDouble(elem))
 ```
 
 How do we test `crazyDouble`?
@@ -158,7 +159,7 @@ Can we create an **observable** object that holds clicks and ticks, **subscribe*
 
 ### Observer/Observable Design Pattern
 
-(Adapted from https://csc301-fall-2016.github.io/resources/lec6-2--2016-10-25.pdf)
+(Adapted from [https://csc301-fall-2016.github.io/resources/lec6-2--2016-10-25.pdf](https://csc301-fall-2016.github.io/resources/lec6-2--2016-10-25.pdf))
 
 - Common design pattern
 - Appeared in GoF

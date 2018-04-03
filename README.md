@@ -77,7 +77,7 @@ Some modifications may require additional Babel plugins to be installed (see [ht
     - [overpopulation] Any live cell with >3 live neighbours dies.
     - [reproduction] Any dead cell with exactly three live neighbours becomes a live cell.
 
-![GOL initial state example](img/GOL-init-ex.png) ![GOL moving example](img/GOL-mov-ex.png)
+![GOL initial state example](img/GOL-init-ex.png) ![GOL moving example](img/GOL-mov-ex.gif)
 
 ### Implementing the Game of Life
 
@@ -109,8 +109,8 @@ This means that we can produce new states forever if we
 
 What's functional about this model?  
 It has no **side effects** (interaction with anything outside the model):
-- To produce the next state, the game logic doesn’t use anything other than the input it’s given (the previous state)
-- The game logic doesn’t *modify* a global state (or any other external data); it produces a **new** version of the state
+- To produce the next state, the game logic doesn't use anything other than the input it's given (the previous state)
+- The game logic doesn't *modify* a global state (or any other external data); it produces a **new** version of the state
 
 ![stateless terms]()
 
@@ -126,7 +126,7 @@ function crazyDouble(x) {
 		return x*2;
 }
 
-// We’d like to apply crazyDouble to all the elements of a list...
+// We'd like to apply crazyDouble to all the elements of a list...
 var doubled = []
 for (var elem of [1, 2, 3])
 	doubled.append(crazyDouble(elem))
@@ -135,10 +135,10 @@ for (var elem of [1, 2, 3])
 How do we test `crazyDouble`?
 - Side effects make testing much harder - why?
 - Are there cases where we need side effects?  
-(Pure functional languages don’t allow them...)
+(Pure functional languages don't allow them...)
 - Notice that the loop order matters here:  
 If it is Wednesday when we start looping, and it stops being Wednesday while we are looping, then some elements will be doubled and some will be tripled - and the result would be different if we looped in a different order!
-- So we can’t apply `crazyDouble` to the elements in parallel, or in a different order, for optimization...
+- So we can't apply `crazyDouble` to the elements in parallel, or in a different order, for optimization...
 
 ### Triggering updates
 
@@ -155,6 +155,81 @@ Can we treat clicks and ticks as **events**, and implement **event handlers**?
 
 Can we create an **observable** object that holds clicks and ticks, **subscribe** to it, and trigger an update when a click or tick occurs?  
 (What is the difference between event handling and observer/observable?)
+
+### Observer/Observable Design Pattern
+
+(Adapted from https://csc301-fall-2016.github.io/resources/lec6-2--2016-10-25.pdf)
+
+- Common design pattern
+- Appeared in GoF
+- A few names:
+  - Observer-Observable
+  - Listener
+  - Publish-Subscribe
+- When something happens to object A, object B gets notified and takes an action
+- The two objects care about interfaces (eg. observer and observable), not concrete implementations
+
+![observer/observable diagram]()
+
+#### Observer/Observable - Why?
+
+- **Simple way to decouple modules**
+  - An observable doesn't need to know much about its observers
+  - As long as the observers implement the observer interface (which is usually very simple), they will get notified whenever something interesting happens
+- **Fundamental building block in event-driven architecture**
+  - eg. GUI where a user's mouse click raises an event, which triggers various listeners
+  - This is a standard way of decoupling GUI (presentation layer) from business logic
+
+### What is reactive programming?
+
+[Wikipedia](https://en.wikipedia.org/wiki/Reactive_programming):  
+> ...a declarative programming paradigm concerned with data streams and the propagation of change
+
+[The Reactive Manifesto](https://www.reactivemanifesto.org/):
+> Reactive Systems are:
+  - Responsive: The system responds in a timely manner if at all possible.
+  - Resilient: The system stays responsive in the face of failure.
+  - Elastic: The system stays responsive under varying workload.
+  - Message Driven: Reactive Systems rely on asynchronous message-passing to establish a boundary between components that ensures loose coupling, isolation and location transparency.
+
+[Introduction to Reactive Programming](https://egghead.io/courses/introduction-to-reactive-programming):
+> Reactive programming is programming with asynchronous data streams.
+
+### Modeling data as a stream
+
+At the core of any system are **values**, which exist for some continuous period (eg. variables, pixels, mouse position). We'll refer to these as "**behaviours**".
+
+![mouse button value example]()
+
+But computers don't operate continuously (in real time).  
+And we're not necessarily interested in behaviours at every point in time (eg. do we always care when the user moves the mouse?).  
+So we want to examine certain behaviours, in a way that doesn't depend on time.
+
+We can describe specific conditions on a behaviour, which we'll call "**events**".
+
+![mouse click event example]()
+
+Events are discrete (they only occur at specific points in time).
+
+We need a way to model events and have our system handle them...
+
+If we can connect our system to an **input stream**, then we can **add events** to the stream as they occur, and our system can **react** to them as it receives them.
+
+![input stream arch]()
+
+(Notice that our system still has no side effects!)
+
+We don't model time, because the timing of an event doesn't matter to our system!
+
+We are only interested in:
+- the relative **order** of events, and
+- the state of the system when the event occurs (which itself is only dependent on the initial state and the previous events that have occured)
+
+What if we have multiple kinds of events (eg. clicks and ticks)?
+
+We can create streams of each of these events - and then we can **combine** them (or **create** new kinds of events) using functional patterns.
+
+![combined input stream arch]()
 
 ---
 

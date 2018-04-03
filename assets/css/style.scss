@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* increase content width + decrease sidebar width for large screens */
+section {
+  width: 600px;
+}
+
+header, footer {
+  width: 200px;
+}

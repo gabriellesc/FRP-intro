@@ -69,7 +69,92 @@ Some modifications may require additional Babel plugins to be installed (see [ht
 
 ## Getting Started With Functional Reactive Programming
 
+### Conway's Game of Life
 
+- Grid of "alive" and "dead" cells
+- In each iteration of the game (a "tick"), cells become dead or alive based on the previous state of the grid:
+    - [underpopulation] Any live cell with <2 live neighbours dies.
+    - [overpopulation] Any live cell with >3 live neighbours dies.
+    - [reproduction] Any dead cell with exactly three live neighbours becomes a live cell.
+
+![GOL initial state example](img/GOL-init-ex.png) ![GOL moving example](img/GOL-mov-ex.png)
+
+### Implementing the Game of Life
+
+*We need:*
+- an **initial state** of the world
+- **game logic** (based on the pre-defined rules)
+- a **timer** to produce "ticks"
+
+*We also want:*
+- a **visual representation** of the world, which gets updated when the state of the world changes
+- a way to **interact** with the world (change the state of cells)
+- a way to **pause/unpause** the game
+
+### Game logic
+
+We would like to implement the game logic as a **function**, which takes a **previous game state** and produces the **next game state**.
+
+Moreover, we would like to treat the function as a **black box**: it doesn't matter how it is implemented; we can trust that it will correctly produce the next state if we give it the previous state.
+
+![game logic black box arch 1]()
+
+This means that we can produce new states forever if we
+- start with the initial state, then
+- keep feeding the next state back into the function
+
+![game logic black box arch 2]()
+
+### Functional Game Logic
+
+What's functional about this model?  
+It has no **side effects** (interaction with anything outside the model):
+- To produce the next state, the game logic doesn’t use anything other than the input it’s given (the previous state)
+- The game logic doesn’t *modify* a global state (or any other external data); it produces a **new** version of the state
+
+![stateless terms]()
+
+What is the advantage of having a functional model?
+--> **Testability**
+
+What's the problem with this code?
+```
+function crazyDouble(x) {
+	if (new Date.getDay() == 4)    // if today is Wednesday
+		return x*3;
+	else
+		return x*2;
+}
+
+// We’d like to apply crazyDouble to all the elements of a list...
+var doubled = []
+for (var elem of [1, 2, 3])
+	doubled.append(crazyDouble(elem))
+```
+
+How do we test `crazyDouble`?
+- Side effects make testing much harder - why?
+- Are there cases where we need side effects?  
+(Pure functional languages don’t allow them...)
+- Notice that the loop order matters here:  
+If it is Wednesday when we start looping, and it stops being Wednesday while we are looping, then some elements will be doubled and some will be tripled - and the result would be different if we looped in a different order!
+- So we can’t apply `crazyDouble` to the elements in parallel, or in a different order, for optimization...
+
+### Triggering updates
+
+We want to trigger an update (i.e. call our update function)...
+- on each tick
+- on each click
+- (maybe even when other things occur, if we add other functionality?)
+
+![non-FRP black box arch]()
+
+Can we treat clicks and ticks as **events**, and implement **event handlers**?
+--> What are the challenges of this implementation?
+--> How would we test this implementation?
+
+Can we create an **observable** object that holds clicks and ticks, **subscribe** to it, and trigger an update when a click or tick occurs?  
+(What is the difference between event handling and observer/observable?)
 
 ---
 

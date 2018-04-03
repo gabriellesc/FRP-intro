@@ -47,8 +47,6 @@ All demos use React.js, and all FRP demos use <a href="https://github.com/baconj
 
 
 ## How to use this code
-**Each demo is live:**
-
 | Demo                                 | Running at |
 | :----------------------------------: | ---------- |
 | [FRP-GOL-init](FRP-GOL-init)         | [gabriellesc.github.io/FRP-intro/FRP-GOL-init/](https://gabriellesc.github.io/FRP-intro/FRP-GOL-init) |
